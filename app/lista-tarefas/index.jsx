@@ -4,22 +4,22 @@ import { View, Text, StyleSheet, FlatList } from "react-native";
 
 const TAREFAS = [
     { id: 1, descricao: 'Acordar', feito: false, date: '15/08/2024' },
-    { id: 2, descricao: 'Tomar Café', feito: false, date: '15/08/2024' },
-    { id: 3, descricao: 'Comprar Pão', feito: true, date: '15/08/2024' },
-    { id: 4, descricao: 'Dar comida pro cachorro', feito: true, date: '15/08/2024' },
-    { id: 5, descricao: 'Sair', feito: true, date: '15/08/2024' },
-    { id: 6, descricao: 'Pegar Guarda-Chuva', feito: true, date: '15/08/2024' },
-    { id: 7, descricao: 'Pegar Casaco', feito: true, date: '15/08/2024' },
-    { id: 8, descricao: 'Comprar um carro', feito: true, date: '15/08/2024' },
-    { id: 9, descricao: 'Arrumar o telhado', feito: true, date: '15/08/2024' },
-    { id: 10, descricao: 'Plantar', feito: true, date: '15/08/2024' },
-    { id: 11, descricao: 'Almoçar', feito: true, date: '15/08/2024' },
-    { id: 12, descricao: 'Comer sobremesa', feito: true, date: '15/08/2024' },
+    { id: 2, descricao: 'Tomar Banho', feito: false, date: '15/08/2024' },
+    { id: 3, descricao: 'Comer', feito: true, date: '15/08/2024' },
+    { id: 4, descricao: 'Lavar a louça', feito: true, date: '15/08/2024' },
+    { id: 5, descricao: 'Pegar Chaves', feito: true, date: '15/08/2024' },
+    { id: 6, descricao: 'Pegar Casaco', feito: true, date: '15/08/2024' },
+    { id: 7, descricao: 'Sair', feito: true, date: '15/08/2024' },
+    { id: 8, descricao: 'Comprar Comida', feito: true, date: '15/08/2024' },
+    { id: 9, descricao: 'Arrumar A Casa', feito: true, date: '15/08/2024' },
+    { id: 10, descricao: 'Fazer Atividade', feito: true, date: '15/08/2024' },
+    { id: 11, descricao: 'Preparar Almoço', feito: true, date: '15/08/2024' },
+    { id: 12, descricao: 'Tomar Remédios', feito: true, date: '15/08/2024' },
     { id: 13, descricao: 'Almoçar', feito: true, date: '15/08/2024' },
     { id: 14, descricao: 'Ler', feito: true, date: '15/08/2024' },
-    { id: 15, descricao: 'Comprar arroz', feito: true, date: '15/08/2024' },
-    { id: 16, descricao: 'Comprar feijão', feito: true, date: '15/08/2024' },
-    { id: 17, descricao: 'Comprar soja', feito: true, date: '15/08/2024' },
+    { id: 15, descricao: 'Fazer Redação', feito: true, date: '15/08/2024' },
+    { id: 16, descricao: 'Estudar', feito: true, date: '15/08/2024' },
+    { id: 17, descricao: 'Dormir', feito: true, date: '15/08/2024' },
 
 ]
 
@@ -37,7 +37,7 @@ const toDo = function () {
             <View style={styles.item} >
                 {!item.feito
                     ? <Text style={styles.listItem}>{item.descricao}</Text>
-                    : <Text style={[styles.listItem, { textDecorationLine: 'line-through', color: '#606FAE'}]}>{item.descricao}</Text>
+                    : <Text style={[styles.listItem, { textDecorationLine: 'line-through', color: '#f7cad0'}]}>{item.descricao}</Text>
                 }
             </View>
         </Pressable >
@@ -48,7 +48,7 @@ const toDo = function () {
             <View style={styles.content}>
                 <View style={styles.titleAlign}>
                     <Text style={styles.title}>Lista de Tarefas</Text>
-                    <Text style={styles.moji}>૮꒰〃◞ ༝ ◟꒱ა #ょぃ — ♡</Text>
+                    <Text style={styles.moji}>(˶°ㅁ°) !! # — ♡</Text>
                 </View>
                 <FlatList
                     data={_tarefas}
@@ -83,12 +83,12 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 45,
+        fontSize: 40,
         fontWeight: 'bold',
         marginBottom: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#606FAE',
+        color: '#f7cad0',
     },
 
     moji: {
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#606FAE',
+        color: '#f7cad0',
     },
 
     titleAlign: {
